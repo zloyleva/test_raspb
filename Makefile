@@ -1,7 +1,8 @@
 container = webapp_docker
 
 build: #build docker container #
-	@sudo docker build -t $(container) .  
+	# @sudo docker build -t $(container) .  
+	@sudo docker build --no-cache -t $(container) .  
 
 stop: #stop docker container #
 	@docker stop $(container)
